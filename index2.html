@@ -1,151 +1,36 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dryfire Visual Training App</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 20px; background: #f0f0f0; }
-        #selector { margin: 20px; }
-        button { padding: 10px 20px; margin: 10px; cursor: pointer; }
-        #canvas { border: 1px solid #000; background: #fff; width: 100%; max-width: 800px; height: 400px; display: block; margin: 0 auto; }
-        #timer, #score { font-size: 24px; margin: 10px; }
-        #results { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.8); color: #fff; padding: 20px; border-radius: 10px; }
-    </style>
+    <title>Jake Gray</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Dryfire Visual Training App</h1>
-    <p>Train visual processing for USPSA-style shooting speed. Click targets quickly!</p>
-    <div id="selector">
-        <button onclick="startSim(1)">Sim 1: Single Target Draw</button>
-        <button onclick="startSim(2)">Sim 2: Multi-Target Engagement</button>
-        <button onclick="startSim(3)">Sim 3: Shoot/No-Shoot</button>
-    </div>
-    <canvas id="canvas" width="800" height="400"></canvas>
-    <div id="timer">Time: 0.00s</div>
-    <div id="score">Hits: 0</div>
-    <button id="startBtn" onclick="startTimer()" style="display:none;">Start</button>
-    <div id="results">
-        <h2>Results</h2>
-        <p id="resultText"></p>
-        <button onclick="resetSim()">Retry</button>
-        <button onclick="backToMenu()">Back</button>
-    </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Jake Grays</div>
+            <ul class="nav-links">
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Building a Brighter Future with Technology</h1>
+            <p class="underway-note">This website is currently underway. More features and projects coming soon!</p>
+        </div>
+    </header>
 
-    <script>
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        let simType = 0;
-        let targets = [];
-        let hits = 0;
-        let startTime, timerInterval;
-        let isRunning = false;
+    <section id="about" class="section">
+        <div class="about-content">
+        </div>
+    </section>
 
-        // Draw USPSA-style target (simplified: rectangle with zones)
-        function drawTarget(x, y, isNoShoot = false) {
-            ctx.fillStyle = isNoShoot ? '#fff' : '#d2b48c'; // White for no-shoot, tan for shoot
-            ctx.fillRect(x, y, 100, 200); // Body
-            ctx.fillRect(x+20, y-50, 60, 50); // Head
-            ctx.strokeStyle = '#000';
-            ctx.lineWidth = 2;
-            ctx.strokeRect(x, y, 100, 200);
-            ctx.strokeRect(x+20, y-50, 60, 50);
-            // A-zone example
-            ctx.strokeRect(x+30, y+50, 40, 100);
-            if (isNoShoot) {
-                ctx.fillStyle = '#000';
-                ctx.font = '20px Arial';
-                ctx.fillText('NO SHOOT', x+10, y+100);
-            }
-            return {x, y, w:100, h:250, hit: false, noShoot: isNoShoot}; // Hitbox includes head
-        }
+    <section id="contact" class="section">
+    </section>
 
-        function startSim(type) {
-            simType = type;
-            document.getElementById('selector').style.display = 'none';
-            document.getElementById('startBtn').style.display = 'block';
-            resetCanvas();
-        }
-
-        function resetCanvas() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            targets = [];
-            hits = 0;
-            document.getElementById('score').innerText = 'Hits: 0';
-            document.getElementById('timer').innerText = 'Time: 0.00s';
-            if (simType === 1) {
-                targets.push(drawTarget(350, 100));
-            } else if (simType === 2) {
-                targets.push(drawTarget(100, 100));
-                targets.push(drawTarget(350, 100));
-                targets.push(drawTarget(600, 100));
-            } else if (simType === 3) {
-                targets.push(drawTarget(100, 100, true)); // No-shoot
-                targets.push(drawTarget(350, 100));
-                targets.push(drawTarget(600, 100, true)); // No-shoot
-            }
-        }
-
-        function startTimer() {
-            if (isRunning) return;
-            isRunning = true;
-            startTime = performance.now();
-            timerInterval = setInterval(updateTimer, 10);
-            document.getElementById('startBtn').style.display = 'none';
-        }
-
-        function updateTimer() {
-            const time = (performance.now() - startTime) / 1000;
-            document.getElementById('timer').innerText = `Time: ${time.toFixed(2)}s`;
-        }
-
-        function endSim() {
-            clearInterval(timerInterval);
-            isRunning = false;
-            const time = (performance.now() - startTime) / 1000;
-            const accuracy = (hits / targets.filter(t => !t.noShoot).length) * 100;
-            const penalties = targets.filter(t => t.hit && t.noShoot).length * 10; // Example penalty
-            document.getElementById('resultText').innerText = `Time: ${time.toFixed(2)}s\nHits: ${hits}\nAccuracy: ${accuracy.toFixed(0)}%\nPenalties: ${penalties}`;
-            document.getElementById('results').style.display = 'block';
-        }
-
-        function resetSim() {
-            document.getElementById('results').style.display = 'none';
-            document.getElementById('startBtn').style.display = 'block';
-            resetCanvas();
-        }
-
-        function backToMenu() {
-            document.getElementById('results').style.display = 'none';
-            document.getElementById('selector').style.display = 'block';
-            document.getElementById('startBtn').style.display = 'none';
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-        }
-
-        canvas.addEventListener('click', (e) => {
-            if (!isRunning) return;
-            const rect = canvas.getBoundingClientRect();
-            const clickX = e.clientX - rect.left;
-            const clickY = e.clientY - rect.top;
-            let allHit = true;
-            targets.forEach(t => {
-                if (!t.hit && clickX > t.x && clickX < t.x + t.w && clickY > t.y - 50 && clickY < t.y + t.h) {
-                    t.hit = true;
-                    if (!t.noShoot) {
-                        hits++;
-                        document.getElementById('score').innerText = `Hits: ${hits}`;
-                        ctx.fillStyle = 'red'; // Hit feedback
-                        ctx.fillRect(t.x + 40, t.y + 80, 20, 20);
-                    } else {
-                        // Penalty feedback
-                        ctx.fillStyle = 'black';
-                        ctx.fillRect(t.x + 40, t.y + 80, 20, 20);
-                    }
-                }
-                if (!t.hit && !t.noShoot) allHit = false;
-            });
-            if (allHit && hits === targets.filter(t => !t.noShoot).length) endSim();
-        });
-    </script>
+    <footer>
+        <p>&copy; 2025 Jake Gray. All rights reserved.</p>
+    </footer>
 </body>
 </html>
