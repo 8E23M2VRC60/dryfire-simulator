@@ -1,36 +1,77 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jake Gray</title>
+    <title>Jake Gray - Simplifying Enterprise Technology Initiatives since 2016</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Jake Gray</div>
-            <ul class="nav-links">
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation">
+            <a href="#home" class="logo" aria-label="Home">JD</a>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
             </ul>
+            <a href="resume.pdf" class="cta-download" download aria-label="Download Resume">Resume</a>
         </nav>
-        <div class="hero">
-            <h1>Building a Brighter Future with Technology</h1>
-            <p class="underway-note">This website is currently underway. More features and projects coming soon!</p>
-        </div>
     </header>
 
-    <section id="about" class="section">
-        <div class="about-content">
-        </div>
-    </section>
+    <main role="main">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Jake Gray</h1>
+                <p class="hero-subtitle">Highly-technical client director with an intense desire to server Arizona Enterprise clients.</p>
+                <div class="hero-stats">
+                    <span>Specialties include: Networking, Security, Cloud, Datacenter.</span>
+                    <span>Hundreds of millions in successful, measurable implementations. </span>
+               
+                </div>
+                <a href="#projects" class="cta-primary">Explore Work</a>
+            </div>
+            <div class="hero-bg"></div>
+        </section>
 
-    <section id="contact" class="section">
-    </section>
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">Hi, I'm Jake Gray! I'm a technical seller responsible for generating over $250M career sales in Arizona Enterprise. Whether you are rebuilding an entire datacenter from scratch, negotiating new cloud commits, or implementing complex multi-year technology roadmaps; I'm your guy.</p>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Jake Gray. All rights reserved.</p>
+        <section id="skills" class="skills">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span class="skill-name">Consultative Seller focused on first-principle fundamentals.</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--level: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Intense product knowledge and key implementation aspects.</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--level: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Excellent communication, negotiation, and stakeholder alignment.</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--level: 80%;"></div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2025 Jake Gray. All signals reserved.</p>
+        <a href="#home" class="back-to-top">^</a>
     </footer>
 </body>
 </html>
