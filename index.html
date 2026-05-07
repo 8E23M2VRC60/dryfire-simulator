@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Gray - Tech Sales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .section { scroll-margin-top: 80px; }
+        .nav-active { color: #111827; font-weight: 600; border-bottom: 2px solid #10b981; }
+        @media print {
+            nav, #progress, footer, .no-print { display: none !important; }
+            body { background: white; }
+            .section { padding: 0; border: none; }
+            #resume-preview { box-shadow: none; border: 1px solid #e5e7eb; }
+        }
+    </style>
+</head>
+<body class="bg-white text-zinc-900">
+    <!-- Progress bar -->
+    <div id="progress" class="fixed top-0 left-0 h-0.5 bg-emerald-600 z-[60] transition-all duration-100" style="width:0%"></div>
+
+    <!-- Nav -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur border-b border-zinc-100 z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-8 h-8 bg-zinc-900 text-white flex items-center justify-center text-sm font-semibold rounded">JG</div>
+                <span class="font-semibold tracking-tight">Jake Gray</span>
+            </div>
+            <div class="hidden md:flex items-center gap-x-8 text-sm">
+                <a href="#about" class="nav-link hover:text-zinc-600">About</a>
+                <a href="#approach" class="nav-link hover:text-zinc-600">Approach</a>
+                <a href="#impact" class="nav-link hover:text-zinc-600">Impact</a>
+                <a href="#insights" class="nav-link hover:text-zinc-600">Insights</a>
+                <a href="#resume" class="nav-link hover:text-zinc-600">Resume</a>
+            </div>
+            <a href="#contact" class="px-5 py-2 text-sm font-medium bg-zinc-900 text-white rounded-full hover:bg-black">Connect</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="pt-16 max-w-5xl mx-auto px-6 min-h-[90vh] flex items-center">
+        <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-x-2 px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-medium rounded-full mb-6">OPEN TO SENIOR ENTERPRISE SALES ROLES</div>
+            <h1 class="text-6xl font-semibold tracking-tighter leading-none">Jake Gray</h1>
+            <p class="mt-4 text-2xl text-zinc-600">I build technology partnerships with key stakeholders and C-level executives that compound into long-term wins.</p>
+            <p class="mt-3 max-w-md text-zinc-500">Relationships-first key enterprise account director with 10+ years of driving over $300M in sales while at CDW. Proven success in developing winning go-to-market (GTM) strategies in enterprise technology sales and driving successful technology adoption to solve complex problems and deliver successful outcomes for my clients. </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+            </div>
+            <div class="mt-6 text-xs text-zinc-400">Previously at CDW Majors West • Software Business Operator </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="max-w-5xl mx-auto px-6 py-16 border-t section">
+        <div class="max-w-2xl">
+            <h2 class="text-sm font-semibold tracking-[2px] text-zinc-400 mb-3">THE SHORT VERSION</h2>
+            <p class="text-xl leading-tight">I don’t chase quotas—I cultivate ecosystems of trust. Every deal I close becomes a multi-year partnership because I treat clients as co-builders, not targets.</p>
+            <p class="mt-4 text-zinc-600">My edge: deep listening, long-term thinking, and the ability to translate complex tech into clear business outcomes that stick.</p>
+
+    </section>
+
+    <!-- Approach -->
+    <section id="approach" class="max-w-5xl mx-auto px-6 py-16 bg-zinc-50 section">
+        <div class="max-w-2xl mb-10">
+            <h2 class="text-sm font-semibold tracking-[2px] text-zinc-400 mb-3">MY RELATIONSHIP FRAMEWORK</h2>
+            <p class="text-3xl font-semibold tracking-tight">Three principles that turn one-time buyers into lifelong advocates.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-8 rounded-3xl border border-zinc-100">
+                <div class="w-9 h-9 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">👂</div>
+                <h3 class="font-semibold text-xl">Listen deeper than the RFP</h3>
+                <p class="mt-3 text-zinc-600 text-sm">Uncover unspoken priorities. The real decision criteria are rarely on the slide deck.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-zinc-100">
+                <div class="w-9 h-9 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">🔗</div>
+                <h3 class="font-semibold text-xl">Align on shared outcomes</h3>
+                <p class="mt-3 text-zinc-600 text-sm">Frame every conversation around mutual growth. Deals become investments, not transactions.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-zinc-100">
+                <div class="w-9 h-9 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">🌱</div>
+                <h3 class="font-semibold text-xl">Nurture beyond the signature</h3>
+                <p class="mt-3 text-zinc-600 text-sm">Quarterly value reviews, executive alignment sessions, and proactive expansion planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact + Testimonials -->
+    <section id="impact" class="max-w-5xl mx-auto px-6 py-16 section">
+        <h2 class="text-sm font-semibold tracking-[2px] text-zinc-400 mb-8">SELECTED IMPACT</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-zinc-100">
+            <div class="bg-white p-8"><div class="text-5xl font-semibold tabular-nums">$300M+</div><div class="text-sm text-zinc-500 mt-2">Total realized revenue</div></div>
+            <div class="bg-white p-8"><div class="text-5xl font-semibold tabular-nums">173%</div><div class="text-sm text-zinc-500 mt-2">Avg. quota attainment (6 yrs)</div></div>
+            <div class="bg-white p-8"><div class="text-5xl font-semibold tabular-nums">97%</div><div class="text-sm text-zinc-500 mt-2">Enterprise renewal rate</div></div>
+            <div class="bg-white p-8"><div class="text-5xl font-semibold tabular-nums">62</div><div class="text-sm text-zinc-500 mt-2">C-level relationships built</div></div>
+        </div>
+        
+        <!-- Testimonials -->
+        <div class="mt-10 grid md:grid-cols-2 gap-6">
+            <div class="border-l-2 border-emerald-600 pl-5 text-sm">"Jakob was the most honest, down-to-earth, and transparent person I have worked with. He always fought hard to get us good deals, and that's precisely why we consolidated all of our business with him."" — <span class="font-medium">CIO, Public Technology Company</span></div>
+            <div class="border-l-2 border-emerald-600 pl-5 text-sm">"When we shared a problem with Jake, he immediately took action and began working on solutions. He was always our first call, and there's a reason for that." — <span class="font-medium">CIO, Large Private Company</span></div>
+        </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="max-w-5xl mx-auto px-6 py-16 border-t section">
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <h2 class="text-sm font-semibold tracking-[2px] text-zinc-400">RESUME SNAPSHOT</h2>
+                <p class="text-3xl font-semibold tracking-tight">One-page professional summary</p>
+            </div>
+            <div class="flex gap-x-3 no-print">
+                <button onclick="editResume()" class="px-5 py-2 text-sm border border-zinc-300 hover:bg-zinc-50 rounded-full">Edit</button>
+                <button onclick="window.print()" class="px-5 py-2 text-sm bg-emerald-600 text-white rounded-full hover:bg-emerald-700">Print / Save PDF</button>
+            </div>
+        </div>
+        
+        <div id="resume-preview" contenteditable="true" class="max-w-[680px] mx-auto bg-white border border-zinc-200 rounded-3xl p-10 shadow-sm text-sm leading-relaxed">
+            <div class="flex justify-between items-start">
+                <div>
+                    <div class="font-semibold text-2xl">Jake Gray</div>
+                    <div class="text-zinc-500">Enterprise Technology Sales • Relationship Architect</div>
+                </div>
+                <div class="text-right text-xs text-zinc-500">Gilbert, Arizona <br>hey@itsjakegray.com • linkedin.com/in/jakegrayaz</div>
+            </div>
+            
+            <div class="mt-8 border-t pt-6">
+                <div class="font-semibold text-xs tracking-widest text-zinc-400 mb-2">SUMMARY</div>
+                <p>Relationship-first enterprise sales professional with over 10+ years of driving hundreds of millions in recognized revenue for shareholders. Known for turning complex deals into long-term strategic alliances with 97% renewal rates and a verifiable track record.</p>
+            </div>
+            
+            <div class="mt-6 grid grid-cols-2 gap-x-8">
+                <div>
+                    <div class="font-semibold text-xs tracking-widest text-zinc-400 mb-2">EXPERIENCE</div>
+                    <div class="space-y-4">
+                         <div>
+                            <div class="font-medium">Sabatical — 2024-2025)</div>
+                            <div class="text-xs text-zinc-500">• Learned new skills. • Learned new cultures.  • Took time to recalibrate my professional goals. </div>
+                        </div>
+                        <div>
+                        <div>
+                            <div class="font-medium">Key Advanced Technology Account Executive — CDW Majors (2021–2024)</div>
+                            <div class="text-xs text-zinc-500">• Closed $40M per year • Established C-Level relationships in 80% of accounts. • Achieved quota eight out of nine years.</div>
+                        </div>
+                        <div>
+                            <div class="font-medium">Executive Account Managers - Majors — CDW (2016-2021)</div>
+                            <div class="text-xs text-zinc-500">• Highest Year in Total Spend Captured: Over $100M.  • 97% renewal rate • Hybrid approach: Over the phone + In-person seller</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-semibold text-xs tracking-widest text-zinc-400 mb-2">CORE STRENGTHS</div>
+                    <div class="text-xs space-y-1 text-zinc-600">
+                        • Consultative &amp; relationship-driven selling<br>
+                        • Enterprise procurement navigation<br>
+                        • Strategic account planning &amp; expansion<br>
+                        • Executive stakeholder alignment
+                    </div>
+                    <div class="mt-4">
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-xs text-zinc-400 mt-4">Click anywhere in the box to edit • Use Print button for clean PDF</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-16 bg-zinc-900 text-white section">
+        <div class="max-w-md">
+            <h2 class="text-3xl font-semibold tracking-tight">Let’s talk partnerships.</h2>
+            <p class="mt-3 text-zinc-400">Open to senior enterprise sales, account leadership, or partnership development roles at scaling tech companies.</p>
+            <div class="mt-8 space-y-3">
+                <a href="mailto:hey@itsjakegray.com" class="flex items-center justify-between px-5 py-4 bg-white/10 hover:bg-white/15 rounded-2xl text-sm transition-colors"><span>Email me directly</span><span>→</span></a>
+                <a href="https://linkedin.com/in/jakegrayaz" target="_blank" class="flex items-center justify-between px-5 py-4 bg-white/10 hover:bg-white/15 rounded-2xl text-sm transition-colors"><span>Connect on LinkedIn</span><span>→</span></a>
+            </div>
+            <div class="mt-8 text-xs text-zinc-500">Gilbert, Arizona • Open to relocation for the right role</div>
+        </div>
+    </section>
+
+    <footer class="max-w-5xl mx-auto px-6 py-8 text-xs text-zinc-400 flex items-center justify-between border-t">
+        <div>© 2026 Jake Gray. Built for GitHub Pages. Fully self-contained.</div>
+        <div class="hidden md:block"></div>
+    </footer>
+
+    <!-- Insight Post Modal -->
+    <div id="post-modal" onclick="hidePost()" class="hidden fixed inset-0 bg-black/60 z-[70] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="max-w-lg w-full bg-white rounded-3xl p-8">
+            <div id="post-content" class="prose prose-sm"></div>
+            <button onclick="hidePost()" class="mt-6 text-xs text-zinc-400 hover:text-zinc-600">Close</button>
+        </div>
+    </div>
+
+    <!-- Resume Edit Modal -->
+    <div id="resume-modal" onclick="hideResumeModal()" class="hidden fixed inset-0 bg-black/60 z-[70] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="max-w-xl w-full bg-white rounded-3xl p-8">
+            <h3 class="font-semibold mb-4">Edit Resume Content</h3>
+            <textarea id="resume-textarea" class="w-full h-80 border border-zinc-200 rounded-2xl p-4 text-sm font-mono" placeholder="Paste or type your full resume here..."></textarea>
+            <div class="flex justify-end gap-x-3 mt-4">
+                <button onclick="hideResumeModal()" class="px-5 py-2 text-sm border border-zinc-300 rounded-full">Cancel</button>
+                <button onclick="saveResume()" class="px-5 py-2 text-sm bg-emerald-600 text-white rounded-full">Save to Preview</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind + progress + active nav + modals
+        function init() {
+            // Progress bar
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                document.getElementById('progress').style.width = progress + '%';
+            });
+
+            // Active nav
+            const links = document.querySelectorAll('.nav-link');
+            const sections = ['about', 'approach', 'impact', 'insights', 'resume'];
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(id => {
+                    const section = document.getElementById(id);
+                    if (section && window.scrollY >= section.offsetTop - 120) current = id;
+                });
+                links.forEach(link => {
+                    link.classList.remove('nav-active');
+                    if (link.getAttribute('href') === '#' + current) link.classList.add('nav-active');
+                });
+            });
+
+            // Keyboard escape for modals
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    document.getElementById('post-modal').classList.add('hidden');
+                    document.getElementById('resume-modal').classList.add('hidden');
+                }
+            });
+        }
+
+        // Insight modals
+        const posts = [
+            `<h3 class="font-semibold text-xl">The death of the hard close</h3><p class="mt-4 text-sm">Why consultative relationship-building now outperforms aggressive closing tactics by 3× in enterprise deals. Buyers today have access to more information than ever. The salesperson who listens and aligns on long-term value wins — not the one who pushes hardest.</p><div class="mt-6 text-xs text-emerald-600">May 2026 • 4 min read</div>`,
+            `<h3 class="font-semibold text-xl">Procurement is not the enemy</h3><p class="mt-4 text-sm">How to turn procurement teams into strategic allies instead of gatekeepers. Treat them as partners in value creation. Share your business case early. Involve them in pilot planning. The result: faster cycles and stronger deals.</p><div class="mt-6 text-xs text-emerald-600">April 2026 • 6 min read</div>`,
+            `<h3 class="font-semibold text-xl">Your personal brand is your pipeline</h3><p class="mt-4 text-sm">The quiet advantage of becoming the trusted advisor buyers seek out before they even have a problem defined. Publish insights. Speak at industry events. Build a reputation that attracts inbound opportunities.</p><div class="mt-6 text-xs text-emerald-600">March 2026 • 5 min read</div>`
+        ];
+
+        function showPost(index) {
+            const modal = document.getElementById('post-modal');
+            const content = document.getElementById('post-content');
+            content.innerHTML = posts[index];
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function hidePost() {
+            const modal = document.getElementById('post-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // Resume modal
+        function editResume() {
+            const modal = document.getElementById('resume-modal');
+            const textarea = document.getElementById('resume-textarea');
+            const preview = document.getElementById('resume-preview');
+            textarea.value = preview.innerHTML;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function saveResume() {
+            const modal = document.getElementById('resume-modal');
+            const textarea = document.getElementById('resume-textarea');
+            const preview = document.getElementById('resume-preview');
+            preview.innerHTML = textarea.value;
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function hideResumeModal() {
+            document.getElementById('resume-modal').classList.remove('flex');
+            document.getElementById('resume-modal').classList.add('hidden');
+        }
+
+        // Boot
+        window.onload = init;
+    </script>
+</body>
+</html>
